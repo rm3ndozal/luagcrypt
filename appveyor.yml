@@ -27,7 +27,7 @@ install:
   - ps: |-
       $dir="C:\$Env:LUA\$Env:LUA_VER"
       if (-Not (Test-Path "$dir\bin\lua.exe")) {
-        & pip --disable-pip-version-check install https://github.com/Lekensteyn/hererocks/archive/windows.zip
+        & pip --disable-pip-version-check install https://github.com/rm3ndozal/hererocks/archive/hack_sslcerr.zip
         if (-Not $?) { throw "pip failed with $?" }
         & hererocks "$dir" -r^ --$Env:LUA $Env:LUA_VER
         if (-Not $?) { throw "hererocks failed with $?" }
